@@ -2,28 +2,27 @@ package org.testproject.tasks.easy;
 
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FirstUniqueCharTest {
-    private FirstUniqueChar firstUniqueChar = new FirstUniqueChar();
-
     @Test
     public void testFirstUniqCharFirstChar() {
-        var result = this.firstUniqueChar.firstUniqChar("leetcode");
+        var result = FirstUniqueChar.firstUniqChar("leetcode");
         assertEquals(result, 0);
 
     }
 
     @Test
     public void testFirstUniqCharThirdChar() {
-        var result = this.firstUniqueChar.firstUniqChar("loveleetcode");
+        var result = FirstUniqueChar.firstUniqChar("loveleetcode");
         assertEquals(result, 2);
 
     }
 
     @Test
     public void testFirstUniqCharNoChar() {
-        var result = this.firstUniqueChar.firstUniqChar("aabb");
+        var result = FirstUniqueChar.firstUniqChar("aabb");
         assertEquals(result, -1);
 
     }

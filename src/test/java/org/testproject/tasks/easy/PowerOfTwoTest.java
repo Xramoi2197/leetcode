@@ -2,26 +2,25 @@ package org.testproject.tasks.easy;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PowerOfTwoTest {
-    private PowerOfTwo powerOfTwo = new PowerOfTwo();
-
     @Test
     void isPowerOfTwoZeroDegree() {
-        var result = powerOfTwo.isPowerOfTwo(1);
+        var result = PowerOfTwo.isPowerOfTwo(1);
         assertTrue(result);
     }
 
     @Test
     void isPowerOfTwoFourthDegree() {
-        var result = powerOfTwo.isPowerOfTwo(16);
+        var result = PowerOfTwo.isPowerOfTwo(16);
         assertTrue(result);
     }
 
     @Test
     void isPowerOfTwoFalse() {
-        var result = powerOfTwo.isPowerOfTwo(3);
+        var result = PowerOfTwo.isPowerOfTwo(3);
         assertFalse(result);
     }
 }

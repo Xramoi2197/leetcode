@@ -5,23 +5,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ReversePrefixOfWordTest {
-    private ReversePrefixOfWord reversePrefixOfWord = new ReversePrefixOfWord();
-
     @Test
     void reversePrefixFirst() {
-        var result = reversePrefixOfWord.reversePrefix("abcdefd", 'd');
+        var result = ReversePrefixOfWord.reversePrefix("abcdefd", 'd');
         assertEquals(result, "dcbaefd");
     }
 
     @Test
     void reversePrefixSecond() {
-        var result = reversePrefixOfWord.reversePrefix("xyxzxe", 'z');
+        var result = ReversePrefixOfWord.reversePrefix("xyxzxe", 'z');
         assertEquals(result, "zxyxxe");
     }
 
     @Test
     void reversePrefixLetterNotFound() {
-        var result = reversePrefixOfWord.reversePrefix("abcd", 'z');
+        var result = ReversePrefixOfWord.reversePrefix("abcd", 'z');
         assertEquals(result, "abcd");
     }
 }

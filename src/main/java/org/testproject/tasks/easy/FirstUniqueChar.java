@@ -17,7 +17,7 @@ public class FirstUniqueChar {
         HashMap<Character, int[]> lib = new HashMap<>();
         int[] arr;
         for (int i = 0; i < s.length(); i++) {
-            Character curChar = (Character) s.charAt(i);
+            Character curChar = s.charAt(i);
             if (lib.containsKey(curChar)) {
                 arr = lib.get(curChar);
                 arr[1] += 1;
