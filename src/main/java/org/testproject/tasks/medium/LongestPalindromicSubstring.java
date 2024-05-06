@@ -30,8 +30,8 @@ public class LongestPalindromicSubstring {
     public static String findEven(String s, char[] letters) {
         String res = "" + letters[0];
         for (int indMiddle = 0; indMiddle < s.length(); ++indMiddle) {
-            int leftBorder = indMiddle, rightBorder = indMiddle + 1;
-            res = findPal(s, letters, leftBorder, rightBorder, res);
+            int rightBorder = indMiddle + 1;
+            res = findPal(s, letters, indMiddle, rightBorder, res);
         }
         return res;
     }
